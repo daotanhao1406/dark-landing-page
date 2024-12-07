@@ -1,20 +1,21 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import '@/styles/globals.css'
+import Header from '@/components/layout/Header'
+import Footer from '@/components/layout/Footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Store Landing Page',
-  description: 'Welcome to our innovative store platform - discover amazing products and services.',
-  keywords: 'store, shopping, products, services, e-commerce',
+  description: 'A modern store landing page built with Next.js 14',
+  keywords: ['store', 'landing page', 'next.js', 'react'],
   openGraph: {
     title: 'Store Landing Page',
-    description: 'Welcome to our innovative store platform - discover amazing products and services.',
+    description: 'A modern store landing page built with Next.js 14',
     type: 'website',
     locale: 'en_US',
-    siteName: 'Store Landing Page'
-  }
+  },
 }
 
 export default function RootLayout({
@@ -24,12 +25,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </head>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <Header />
+        <main>{children}</main>
+        <Footer />
+      </body>
     </html>
   )
 }
