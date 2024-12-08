@@ -5,7 +5,6 @@ import Testimonials from '@/components/sections/Testimonials'
 import CTA from '@/components/sections/CTA'
 import TechStack from '@/components/sections/TechStack'
 import Showcase from '@/components/sections/Showcase'
-import Stats from '@/components/sections/Stats'
 
 export default function page() {
   return (
@@ -14,9 +13,8 @@ export default function page() {
       <Features />
       <TechStack />
       <Showcase />
-      <Stats />
-      <Pricing />
       <Testimonials />
+      <Pricing />
       <CTA />
     </div>
   )

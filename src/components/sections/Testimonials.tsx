@@ -1,23 +1,43 @@
 'use client'
-import { motion } from 'framer-motion'
+import { AnimatedTestimonials } from '../ui/animated-testimonials';
 
 const testimonials = [
   {
-    quote: "This toolkit has revolutionized our development process. We're shipping features faster than ever.",
-    author: "Sarah Johnson",
-    role: "CTO, TechCorp"
+    quote:
+      "The attention to detail and innovative features have completely transformed our workflow. This is exactly what we've been looking for.",
+    name: "Sarah Chen",
+    designation: "Product Manager at TechFlow",
+    src: "/person-1.avif",
   },
   {
-    quote: "The components are beautiful and the documentation is excellent. Exactly what we needed.",
-    author: "Mike Thompson",
-    role: "Lead Developer, StartupX"
+    quote:
+      "Implementation was seamless and the results exceeded our expectations. The platform's flexibility is remarkable.",
+    name: "Michael Rodriguez",
+    designation: "CTO at InnovateSphere",
+    src: "/person-2.avif",
   },
   {
-    quote: "Outstanding support and regular updates. It's been a game-changer for our team.",
-    author: "Emily Chen",
-    role: "Product Manager, InnovateCo"
-  }
-]
+    quote:
+      "This solution has significantly improved our team's productivity. The intuitive interface makes complex tasks simple.",
+    name: "Emily Watson",
+    designation: "Operations Director at CloudScale",
+    src: "/person-3.avif",
+  },
+  {
+    quote:
+      "Outstanding support and robust features. It's rare to find a product that delivers on all its promises.",
+    name: "James Kim",
+    designation: "Engineering Lead at DataPro",
+    src: "/person-4.avif",
+  },
+  {
+    quote:
+      "The scalability and performance have been game-changing for our organization. Highly recommend to any growing business.",
+    name: "Lisa Thompson",
+    designation: "VP of Technology at FutureNet",
+    src: "/person-5.avif",
+  },
+];
 
 export default function Testimonials() {
   return (
@@ -28,7 +48,7 @@ export default function Testimonials() {
           <p className="text-xl text-gray-600">Trusted by developers worldwide</p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={index}
@@ -52,7 +72,9 @@ export default function Testimonials() {
               </div>
             </motion.div>
           ))}
-        </div>
+        </div> */}
+
+<AnimatedTestimonials testimonials={testimonials} />;
       </div>
     </section>
   )
