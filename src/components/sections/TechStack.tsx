@@ -1,34 +1,39 @@
 'use client'
 import { motion } from 'framer-motion'
+import { HoverEffect } from '../ui/card-hover-effect'
 
 const MotionDiv = motion.div
 
 const technologies = [
   {
-    name: 'Next.js 14',
+    title: 'Next.js 14',
     description: 'The React Framework for Production',
-    icon: '⚡'
+    icon: '⚡',
+    link: 'https://nextjs.org/'
   },
   {
-    name: 'TypeScript',
+    title: 'TypeScript',
     description: 'Type-Safe JavaScript Development',
-    icon: '📝'
+    icon: '📝',
+    link: 'https://www.typescriptlang.org/'
   },
   {
-    name: 'Tailwind CSS',
+    title: 'Tailwind CSS',
     description: 'Utility-First CSS Framework',
-    icon: '🎨'
+    icon: '🎨',
+    link: 'https://tailwindcss.com/'
   },
   {
-    name: 'Framer Motion',
+    title: 'Framer Motion',
     description: 'Production-Ready Animations',
-    icon: '✨'
+    icon: '✨',
+    link: 'https://motion.dev/'
   }
 ]
 
 export default function TechStack() {
   return (
-    <section className="py-20">
+    <section id='features' className="py-20">
       <div className="container mx-auto px-4">
         <MotionDiv
           initial={{ opacity: 0, y: 20 }}
@@ -40,7 +45,7 @@ export default function TechStack() {
           <p className="text-xl text-gray-600">Powered by the latest technologies</p>
         </MotionDiv>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {technologies.map((tech, index) => (
             <MotionDiv
               key={index}
@@ -48,14 +53,16 @@ export default function TechStack() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow"
+              className="bg-transparent border p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow"
             >
               <div className="text-4xl mb-4">{tech.icon}</div>
-              <h3 className="text-xl font-semibold mb-2">{tech.name}</h3>
+              <h3 className="text-xl font-semibold mb-2">{tech.title}</h3>
               <p className="text-gray-600">{tech.description}</p>
+              
             </MotionDiv>
           ))}
-        </div>
+        </div> */}
+          <HoverEffect items={technologies} />
       </div>
     </section>
   )
