@@ -70,10 +70,16 @@ export default function TechStack() {
           ))}
         </div> */}
           {/* <HoverEffect items={technologies} /> */}
-
+ 
           <ul className="space-y-6 gap-6 mt-8 max-w-7xl mx-auto grid-cols-2 sm:grid lg:grid-cols-3 sm:space-y-0">
         {technologies.map((item: Technology, key: number) => (
+          <motion.div key={key}
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ delay: key * 0.2 }}
+          viewport={{ once: true }}>
           <BeautifulCard link={item.link} key={key} icon={item.icon} title={item.title} description={item.description} />
+          </motion.div>
         ))}
       </ul>
       </div>
