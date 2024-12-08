@@ -1,8 +1,15 @@
 'use client'
 import { motion } from 'framer-motion'
-import { HoverEffect } from '../ui/card-hover-effect'
+import BeautifulCard from '../ui/beautiful-card'
 
 const MotionDiv = motion.div
+
+type Technology = {
+  title: string
+  description: string
+  icon: string
+  link: string
+}
 
 const technologies = [
   {
@@ -11,12 +18,12 @@ const technologies = [
     icon: '⚡',
     link: 'https://nextjs.org/'
   },
-  {
-    title: 'TypeScript',
-    description: 'Type-Safe JavaScript Development',
-    icon: '📝',
-    link: 'https://www.typescriptlang.org/'
-  },
+  // {
+  //   title: 'TypeScript',
+  //   description: 'Type-Safe JavaScript Development',
+  //   icon: '📝',
+  //   link: 'https://www.typescriptlang.org/'
+  // },
   {
     title: 'Tailwind CSS',
     description: 'Utility-First CSS Framework',
@@ -62,7 +69,13 @@ export default function TechStack() {
             </MotionDiv>
           ))}
         </div> */}
-          <HoverEffect items={technologies} />
+          {/* <HoverEffect items={technologies} /> */}
+
+          <ul className="space-y-6 gap-6 mt-8 max-w-7xl mx-auto grid-cols-2 sm:grid lg:grid-cols-3 sm:space-y-0">
+        {technologies.map((item: Technology, key: number) => (
+          <BeautifulCard link={item.link} key={key} icon={item.icon} title={item.title} description={item.description} />
+        ))}
+      </ul>
       </div>
     </section>
   )

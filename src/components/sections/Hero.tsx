@@ -5,6 +5,7 @@ import { BackgroundBeamsWithCollision } from '../ui/background-beams-with-collis
 import { Cover } from '../ui/cover'
 import { ContainerScroll } from '../ui/container-scroll-animation'
 import { Button } from '../ui/Button'
+import Image from 'next/image'
 
 export default function Hero() {
   return (
@@ -53,7 +54,7 @@ export default function Hero() {
           className="mx-auto rounded-2xl object-cover h-full object-left-top"
           draggable={false}
         /> */}
-        <img className="h-full w-full object-cover opacity-90 max-lg:object-contain" src={'/codesandbox.jpg'} alt='demo'/>
+        <Image width={750} height={480} className="h-full w-full object-cover opacity-90 max-lg:object-contain" src={'/codesandbox.jpg'} alt='demo'/>
       </ContainerScroll>
       
       {/* <motion.div initial={{ opacity: 0, y: 20 }}

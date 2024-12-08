@@ -53,7 +53,7 @@ export const HoverEffect = ({
             <motion.div key={idx}
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ delay: idx * 0.1 }}
+              transition={{ delay: idx * 0.2 }}
               viewport={{ once: true }}>
           <Card>
             <div className="text-4xl mb-4">{item.icon}</div>
