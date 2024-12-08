@@ -7,12 +7,12 @@ import Footer from '@/components/layout/Footer'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Store Landing Page',
-  description: 'A modern store landing page built with Next.js 14',
-  keywords: ['store', 'landing page', 'next.js', 'react'],
+  title: 'Nextjs Landing Page',
+  description: 'A modern animation landing page built with Next.js 14',
+  keywords: ['landing page', 'next.js', 'react', 'animation'],
   openGraph: {
-    title: 'Store Landing Page',
-    description: 'A modern store landing page built with Next.js 14',
+    title: 'Nextjs Landing Page',
+    description: 'A modern animation landing page built with Next.js 14',
     type: 'website',
     locale: 'en_US',
   },
