@@ -1,6 +1,6 @@
 'use client'
 import { motion } from 'framer-motion'
-import { Button } from '@/components/ui/button'
+import { Button } from "../ui/button"
 import { ArrowRight } from 'lucide-react'
 import { BackgroundBeamsWithCollision } from '../ui/background-beams-with-collision'
 import { Cover } from '../ui/cover'
