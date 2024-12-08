@@ -1,6 +1,6 @@
 'use client'
 import { motion } from "framer-motion";
-import Button from "../ui/Button";
+import { Button } from "../ui/Button";
 export default function CTA() {
     return (
     <section className="py-20 bg-primary text-white">
