@@ -1,6 +1,6 @@
 'use client'
 import { motion } from 'framer-motion'
-import { Button } from "../ui/button"
+import { Button } from '../ui/Button'
 
 const plans = [
   {

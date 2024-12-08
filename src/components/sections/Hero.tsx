@@ -1,10 +1,10 @@
 'use client'
 import { motion } from 'framer-motion'
-import { Button } from "../ui/button"
 import { ArrowRight } from 'lucide-react'
 import { BackgroundBeamsWithCollision } from '../ui/background-beams-with-collision'
 import { Cover } from '../ui/cover'
 import { ContainerScroll } from '../ui/container-scroll-animation'
+import { Button } from '../ui/Button'
 
 export default function Hero() {
   return (

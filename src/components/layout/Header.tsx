@@ -2,7 +2,7 @@
 import Link from 'next/link'
 import { useCallback } from 'react'
 import { scrollToSection } from '@/lib/scroll'
-import { Button } from "../ui/button"
+import { Button } from '../ui/Button'
 
 export default function Header() {
   const handleNavClick = useCallback((e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
